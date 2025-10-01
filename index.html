@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Miguel Mir Ceballos — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav" data-animate>
+    <div class="nav-inner">
+      <a class="brand" href="/">miguelmir.dev</a>
+      <nav>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+        <button id="theme-toggle" aria-label="Toggle theme" title="Cambiar tema">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid" data-animate>
+        <div class="hero-left">
+          <h1>Hola, soy <span class="accent">Miguel Mir Ceballos</span></h1>
+          <p class="lead">
+            Estudiante de Ingeniería de Software · Entusiasta de Go & Elixir ·
+            Construyendo sistemas escalables y soluciones bien diseñadas.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#projects">Ver proyectos</a>
+            <a class="btn ghost" href="/MiguelMir_CV.pdf" target="_blank" rel="noopener">Descargar CV</a>
+          </div>
+        </div>
+        <div class="hero-right" aria-hidden="true">
+          <!-- Card con estadísticas / skills -->
+          <div class="profile-card" data-tilt>
+            <div class="pc-header">
+              <div class="avatar" aria-hidden="true">MM</div>
+              <div>
+                <strong>Miguel Mir</strong>
+                <small>Software Engineer</small>
+              </div>
+            </div>
+            <ul class="skills">
+              <li>Go · Elixir</li>
+              <li>React · Spring Boot</li>
+              <li>Arquitectura · DevOps</li>
+            </ul>
+            <div class="pc-footer">
+              <span>Disponible para prácticas y proyectos freelance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about" data-animate>
+      <div class="container">
+        <h2>Sobre mí</h2>
+        <p class="muted">
+          Soy estudiante de Ingeniería de Software con pasión por algoritmia, sistemas concurrentes y diseño de software.
+          Me interesa crear productos útiles usando código limpio y pruebas sólidas. Me gusta aprender tecnologías nuevas
+          y aportar soluciones que escalen.
+        </p>
+        <div class="cards">
+          <article class="info-card" data-animate>
+            <h3>Enfoque</h3>
+            <p>Calidad, claridad, y rendimiento. Prefiero soluciones simples y bien justificadas.</p>
+          </article>
+          <article class="info-card" data-animate>
+            <h3>Herramientas</h3>
+            <p>Go, Elixir, Java, React, Docker, GitHub Actions.</p>
+          </article>
+          <article class="info-card" data-animate>
+            <h3>Intereses</h3>
+            <p>Sistemas distribuidos, ML aplicado, simulaciones de mercado y buen diseño UX.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects" data-animate>
+      <div class="container">
+        <h2>Proyectos destacados</h2>
+        <div class="project-grid">
+          <article class="project-card" data-animate>
+            <div class="pc-head">
+              <h3>Gunfighter (Multiplayer)</h3>
+              <span class="tag">React · Spring Boot · WebSockets</span>
+            </div>
+            <p>Juego de mesa digital con sincronización en tiempo real, JWT para auth y diseño de tablero responsive.</p>
+            <a class="card-link" href="#">Ver repo →</a>
+          </article>
+
+          <article class="project-card" data-animate>
+            <div class="pc-head">
+              <h3>Market Simulator</h3>
+              <span class="tag">NetLogo · Python · ML</span>
+            </div>
+            <p>Simulación agent-based y extracción de series para entrenar modelos que predigan escasez.</p>
+            <a class="card-link" href="#">Ver demo →</a>
+          </article>
+
+          <article class="project-card" data-animate>
+            <div class="pc-head">
+              <h3>Concrete Strength ML</h3>
+              <span class="tag">Scikit-learn · Regression</span>
+            </div>
+            <p>Modelo de regresión para predecir resistencia del hormigón a partir de propiedades físicas.</p>
+            <a class="card-link" href="#">Ver notebook →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact" data-animate>
+      <div class="container">
+        <h2>Contacto</h2>
+        <p class="muted">¿Quieres colaborar o hacer una consulta? Escríbeme.</p>
+        <form id="contact-form" class="contact-form" autocomplete="off">
+          <div class="row">
+            <input type="text" name="name" placeholder="Tu nombre" required />
+            <input type="email" name="email" placeholder="Tu email" required />
+          </div>
+          <textarea name="message" placeholder="Tu mensaje" required></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Enviar mensaje</button>
+            <button type="button" id="clear-btn" class="btn ghost">Limpiar</button>
+          </div>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-animate>
+    <div class="container">
+      <p>© <span id="year"></span> Miguel Mir Ceballos · <small>HTML · CSS · JS</small></p>
+      <div class="socials">
+        <a href="https://github.com/miguelmirceballos" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/miguelmirceballos" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
