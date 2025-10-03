@@ -12,10 +12,10 @@
   <header class="nav" data-animate>
     <div class="nav-inner">
       <nav>
-        <a href="#about">Sobre mí</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
-        <button id="theme-toggle" aria-label="Toggle theme" title="Cambiar tema">🌓</button>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌓</button>
       </nav>
     </div>
   </header>
@@ -26,18 +26,17 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-grid" data-animate>
         <div class="hero-left">
-          <h1>Hola, soy <span class="accent">Miguel Mir Ceballos</span></h1>
+          <h1>Hi, I’m <span class="accent">Miguel Mir Ceballos</span></h1>
           <p class="lead">
-            Estudiante de Ingeniería de Software.
-            Construyendo sistemas escalables y soluciones bien diseñadas.
+            Software Engineering student building scalable systems and practical, well-designed software.
           </p>
           <div class="hero-ctas">
-            <a class="btn primary" href="#projects">Ver proyectos</a>
-            <a class="btn ghost" href="/Miguel_Mir_Ceballos-CV.pdf.pdf" target="_blank" rel="noopener">Descargar CV</a>
+            <a class="btn primary" href="#projects">See projects</a>
+            <a class="btn ghost" href="/MiguelMir_CV.pdf" target="_blank" rel="noopener">Download CV</a>
           </div>
         </div>
+
         <div class="hero-right" aria-hidden="true">
-          <!-- Card con estadísticas / skills -->
           <div class="profile-card" data-tilt>
             <div class="pc-header">
               <div class="avatar" aria-hidden="true">MM</div>
@@ -46,13 +45,27 @@
                 <small>Software Engineer</small>
               </div>
             </div>
-            <ul class="skills">
-              <li>Go · Elixir</li>
-              <li>React · Spring Boot</li>
-              <li>Arquitectura · DevOps</li>
-            </ul>
+
+            <div class="profile-section">
+              <h4>Core strengths</h4>
+              <ul class="skills">
+                <li>Algorithms & data structures</li>
+                <li>Concurrent & distributed systems</li>
+                <li>Secure-by-design development</li>
+              </ul>
+            </div>
+
+            <div class="profile-section">
+              <h4>Tools & platforms</h4>
+              <ul class="tools">
+                <li>Go · Elixir · Java · Python · JavaScript</li>
+                <li>React · Spring Boot · Django · Express</li>
+                <li>Docker · Git · GitHub Actions · CI/CD</li>
+              </ul>
+            </div>
+
             <div class="pc-footer">
-              <span>Disponible para prácticas y proyectos freelance</span>
+              <span>Open to internships and freelance projects</span>
             </div>
           </div>
         </div>
@@ -62,34 +75,36 @@
     <!-- ABOUT -->
     <section id="about" class="section about" data-animate>
       <div class="container">
-        <h2>Sobre mí</h2>
+        <h2>About</h2>
         <p class="muted">
-          Soy estudiante de Ingeniería de Software con pasión por algoritmia, sistemas concurrentes y desarrollo full-stack. Me interesa la seguridad y la infraestructura cloud, y mucho más su intersección.
-          Me interesa crear productos útiles usando código limpio y pruebas sólidas. Me gusta aprender tecnologías nuevas
-          y aportar soluciones que escalen.
+          I’m a Software Engineering student with strong interests in algorithms, concurrent systems, and full-stack development.
+          I focus on building practical software using clean code, solid testing, and secure design principles. I enjoy learning new
+          technologies and applying them to problems that require scalable and reliable solutions.
         </p>
+
         <div class="cards">
           <article class="info-card" data-animate>
-            <h3>Enfoque</h3>
-            <p>Calidad, claridad, y rendimiento. Prefiero soluciones simples y bien justificadas.</p>
+            <h3>Approach</h3>
+            <p>Clarity, correctness, and performance. I prefer simple solutions that are well justified and maintainable.</p>
           </article>
+
           <article class="info-card" data-animate>
-            <h3>Herramientas</h3>
-            <p>Java, Python, JavaScript, Spring Boot, React, Django, Express, Docker, Git, Mockito, basic CI/CD, container deployment, JWT, basic encryption, access control</p>
+            <h3>Technical focus</h3>
+            <p>Backend systems, real-time communication, security (JWT, access control), and container deployments.</p>
           </article>
+
           <article class="info-card" data-animate>
-            <h3>Intereses</h3>
-            <p>Cloud infrastructure, application security, full-stack development, data mining, and best practices for secure development
-</p>
+            <h3>Interests</h3>
+            <p>Cloud infrastructure, application security, agent-based simulations, and applied machine learning.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS (ACTUALIZADA) -->
+    <!-- PROJECTS -->
     <section id="projects" class="section projects" data-animate>
       <div class="container">
-        <h2>Proyectos destacados</h2>
+        <h2>Featured Projects</h2>
         <div class="project-grid">
 
           <!-- Gunfighter -->
@@ -98,8 +113,9 @@
               <h3>Gunfighter (Multiplayer)</h3>
               <span class="tag">React · Spring Boot · WebSockets · JWT</span>
             </div>
-            <p>Juego de mesa digital con sincronización en tiempo real mediante WebSockets, autenticación con JWT y un tablero responsive. SPA con React en frontend y Spring Boot en backend.</p>
-            <a class="card-link" href="https://github.com/miguelmirceballos/gunFighter" target="_blank" rel="noopener">Ver repo →</a>
+            <p>A digital board game with real-time synchronization powered by WebSockets, JWT authentication, and a responsive board UI.
+               Single-page architecture with React frontend and Spring Boot backend.</p>
+            <a class="card-link" href="https://github.com/miguelmirceballos/gunFighter" target="_blank" rel="noopener">View repository →</a>
           </article>
 
           <!-- Economic Simulation -->
@@ -108,8 +124,9 @@
               <h3>Market Simulator</h3>
               <span class="tag">NetLogo · Python · ML</span>
             </div>
-            <p>Simulación agent-based que extrae series temporales para entrenar modelos predictivos sobre escasez y fluctuaciones de precio. Código disponible en el repositorio de simulation económica.</p>
-            <a class="card-link" href="https://github.com/miguelmirceballos/economicSimulation" target="_blank" rel="noopener">Ver repo →</a>
+            <p>Agent-based market simulation that extracts time series for training predictive models to detect scarcity and price shifts.
+               Includes data extraction and model evaluation workflows.</p>
+            <a class="card-link" href="https://github.com/miguelmirceballos/economicSimulation" target="_blank" rel="noopener">View repository →</a>
           </article>
 
           <!-- LeetCode Solutions -->
@@ -118,8 +135,8 @@
               <h3>LeetCode Solutions</h3>
               <span class="tag">Python · Java · Elixir · Go · Rust</span>
             </div>
-            <p>Recopilación de soluciones a problemas de algoritmos y estructuras de datos, organizada por problema y con implementaciones en varios lenguajes.</p>
-            <a class="card-link" href="https://github.com/miguelmirceballos/LeetCode-Solutions" target="_blank" rel="noopener">Ver repo →</a>
+            <p>Problem-focused collection of algorithm and data-structure solutions implemented across multiple languages. Organized by problem to demonstrate cross-language proficiency.</p>
+            <a class="card-link" href="https://github.com/miguelmirceballos/LeetCode-Solutions" target="_blank" rel="noopener">View repository →</a>
           </article>
 
           <!-- Private: Data mining app (placeholder) -->
@@ -128,8 +145,8 @@
               <h3>Data Mining App</h3>
               <span class="tag">Private</span>
             </div>
-            <p>Aplicación de minería de datos (privada). En proceso de preparación para publicación pública — coming soon.</p>
-            <span class="card-link disabled">Privado →</span>
+            <p>Private project — data mining application currently being prepared for public release.</p>
+            <span class="card-link disabled" aria-disabled="true">Private →</span>
           </article>
 
           <!-- Private: E-commerce (placeholder) -->
@@ -138,8 +155,8 @@
               <h3>E-commerce</h3>
               <span class="tag">Private</span>
             </div>
-            <p>Proyecto de e-commerce (privado). Será publicado más adelante cuando el repo esté listo.</p>
-            <span class="card-link disabled">Privado →</span>
+            <p>Private e-commerce project. Repository will be published when ready.</p>
+            <span class="card-link disabled" aria-disabled="true">Private →</span>
           </article>
 
         </div>
@@ -149,17 +166,17 @@
     <!-- CONTACT -->
     <section id="contact" class="section contact" data-animate>
       <div class="container">
-        <h2>Contacto</h2>
-        <p class="muted">¿Quieres colaborar o hacer una consulta? Escríbeme.</p>
+        <h2>Contact</h2>
+        <p class="muted">Interested in collaborating or have a question? Send me a message.</p>
         <form id="contact-form" class="contact-form" autocomplete="off">
           <div class="row">
-            <input type="text" name="name" placeholder="Tu nombre" required />
-            <input type="email" name="email" placeholder="Tu email" required />
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
           </div>
-          <textarea name="message" placeholder="Tu mensaje" required></textarea>
+          <textarea name="message" placeholder="Your message" required></textarea>
           <div class="form-actions">
-            <button type="submit" class="btn primary">Enviar mensaje</button>
-            <button type="button" id="clear-btn" class="btn ghost">Limpiar</button>
+            <button type="submit" class="btn primary">Send message</button>
+            <button type="button" id="clear-btn" class="btn ghost">Clear</button>
           </div>
           <p class="form-status" aria-live="polite"></p>
         </form>
