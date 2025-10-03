@@ -7,23 +7,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Minimal avatar styles to ensure correct layout if styles.css is not yet updated */
-    .pc-header { display:flex; align-items:center; gap:12px; }
-    .avatar-img {
-      width:56px;
-      height:56px;
-      border-radius:10px;
-      object-fit:cover;
-      display:inline-block;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    }
-    .profile-section { margin-top:12px; }
-    .profile-section h4 { margin:0 0 6px 0; font-size:0.95rem; }
-    .profile-section ul { margin:0; padding-left:16px; }
-    .contact-card { padding:18px; border-radius:10px; background:rgba(0,0,0,0.03); display:inline-block; }
-    .contact-card a { color: inherit; text-decoration:underline; }
-  </style>
 </head>
 <body>
   <header class="nav" data-animate>
@@ -54,7 +37,16 @@
         </div>
 
         <div class="hero-right" aria-hidden="true">
-
+            <div class="profile-card" data-tilt>
+            <div class="pc-header">
+              <!-- GitHub avatar (uses your GitHub profile picture) -->
+              <img src="https://github.com/miguelmirceballos.png" alt="Miguel Mir avatar" class="avatar-img" />
+              <div>
+                <strong>Miguel Mir</strong>
+                <small>Software Engineer</small>
+              </div>
+            </div>
+              
             <div class="profile-section">
               <h4>Core strengths</h4>
               <ul class="skills">
