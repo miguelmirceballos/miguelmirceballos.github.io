@@ -90,8 +90,41 @@ nav a{ margin-left:1.25rem; color:var(--muted); text-decoration:none; font-weigh
   border-radius:20px; padding:1.25rem; box-shadow: var(--shadow); color:var(--text);
   border:1px solid rgba(255,255,255,0.03);
 }
-.pc-header{ display:flex; gap:0.9rem; align-items:center; margin-bottom:1rem; }
-.avatar{ width:56px; height:56px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-weight:800; background:linear-gradient(90deg,var(--accent),#8be9fd); color:#04202a; }
+/* Header avatar: circular, cropped and consistent fallback */
+.pc-header { display:flex; align-items:center; gap:12px; }
+
+/* Fallback avatar (text) - use when no image is available */
+.avatar {
+  width:56px;
+  height:56px;
+  border-radius:50%;       /* circular */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  background: linear-gradient(90deg, var(--accent), #8be9fd);
+  color: #04202a;
+  flex-shrink:0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 2px solid rgba(255,255,255,0.03);
+}
+
+/* Actual image avatar */
+.avatar-img {
+  width:56px;
+  height:56px;
+  border-radius:50%;       /* IMPORTANT: makes the image circular */
+  object-fit:cover;        /* crop to fill the circle */
+  display:block;
+  flex-shrink:0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 2px solid rgba(255,255,255,0.03);
+  background-color: transparent;
+  /* optional: slight inner shadow to hide tiny white borders */
+  -webkit-mask-image: -webkit-radial-gradient(circle, #000 100%, #000 100%);
+  mask-image: radial-gradient(circle, #000 100%, #000 100%);
+}
+
 .skills{ list-style:none; padding:0; margin:0; color:var(--muted); }
 .skills li{ padding:0.25rem 0; font-weight:600; }
 
