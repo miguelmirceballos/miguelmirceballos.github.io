@@ -7,6 +7,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Minimal avatar styles to ensure correct layout if styles.css is not yet updated */
+    .pc-header { display:flex; align-items:center; gap:12px; }
+    .avatar-img {
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      object-fit:cover;
+      display:inline-block;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .profile-section { margin-top:12px; }
+    .profile-section h4 { margin:0 0 6px 0; font-size:0.95rem; }
+    .profile-section ul { margin:0; padding-left:16px; }
+    .contact-card { padding:18px; border-radius:10px; background:rgba(0,0,0,0.03); display:inline-block; }
+    .contact-card a { color: inherit; text-decoration:underline; }
+  </style>
 </head>
 <body>
   <header class="nav" data-animate>
@@ -39,7 +56,8 @@
         <div class="hero-right" aria-hidden="true">
           <div class="profile-card" data-tilt>
             <div class="pc-header">
-              <div class="avatar" aria-hidden="true">MM</div>
+              <!-- GitHub avatar (uses your GitHub profile picture) -->
+              <img src="https://github.com/miguelmirceballos.png" alt="Miguel Mir avatar" class="avatar-img" />
               <div>
                 <strong>Miguel Mir</strong>
                 <small>Software Engineer</small>
@@ -163,23 +181,16 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (EMAIL + LINKEDIN) -->
     <section id="contact" class="section contact" data-animate>
       <div class="container">
         <h2>Contact</h2>
-        <p class="muted">Interested in collaborating or have a question? Send me a message.</p>
-        <form id="contact-form" class="contact-form" autocomplete="off">
-          <div class="row">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="email" placeholder="Your email" required />
-          </div>
-          <textarea name="message" placeholder="Your message" required></textarea>
-          <div class="form-actions">
-            <button type="submit" class="btn primary">Send message</button>
-            <button type="button" id="clear-btn" class="btn ghost">Clear</button>
-          </div>
-          <p class="form-status" aria-live="polite"></p>
-        </form>
+        <p class="muted">Interested in collaborating or have a question? Reach out to me directly.</p>
+
+        <div class="contact-card" role="region" aria-label="Contact information">
+          <p><strong>Email:</strong> <a href="mailto:miguelmirceballos@gmail.com">miguelmirceballos@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/miguelmirceballos/" target="_blank" rel="noopener">linkedin.com/in/miguelmirceballos</a></p>
+        </div>
       </div>
     </section>
   </main>
@@ -189,12 +200,21 @@
       <p>© <span id="year"></span> Miguel Mir Ceballos · <small>HTML · CSS · JS</small></p>
       <div class="socials">
         <a href="https://github.com/miguelmirceballos" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/miguelmirceballos" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/miguelmirceballos/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // small script to set current year if script.js doesn't already do it
+    (function() {
+      const y = new Date().getFullYear();
+      const el = document.getElementById('year');
+      if (el) el.textContent = y;
+    })();
+  </script>
 </body>
 </html>
+
 
